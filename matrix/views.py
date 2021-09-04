@@ -3,10 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def gallery(request):
-        return render(request, 'matrix/gallery.html')
+        return render(request, 'photos/gallery.html')
 
-def viewPhotos(request,pk):
-        return render(request, 'matrix/photos.html')
+def viewPhoto(request,pk):
+        return render(request, 'photos/photo.html')
 
 def addPhoto(request):
-        return render(request, 'matrix/add.html')
+        return render(request, 'photos/add.html')
