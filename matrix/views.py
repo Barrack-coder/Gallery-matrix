@@ -42,6 +42,6 @@ def addPhoto(request):
                 photo.save()
                 return redirect('gallery') 
         photo= Photo.objects.all() 
-        context = {'categories': categories}  
-        return render(request, 'photos/add.html', context,{'photo': photo})
+        # context = {'categories': categories}  
+        return render(request, 'photos/add.html',{'photo': photo,'categories': categories})
         
