@@ -22,7 +22,7 @@
                 <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Go Back</a>
                 <div class="card">
 
-                    <form method="POST" action="" enctype="multipart/form-data ">
+                    <form method="POST" action="" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="form-group m-3">
@@ -33,11 +33,11 @@
                         <div class="form-group m-3">
                             <label>Select a category</label>
                             <select name="category" class="form-control">
-				<option value="none">Select a category...</option>
-				{% for category in categories %}
-				<option value="{{category.id}}">{{category.name}}</option>
-				{% endfor %}
-				</select>
+                            <option value="none">Select a category...</option>
+                            {% for category in categories %}
+                            <option value="{{category.id}}">{{category.name}}</option>
+                            {% endfor %}
+                            </select>
                         </div>
                         <div class="form-group m-3">
                             <label>Create a new category</label>
